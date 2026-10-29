@@ -1,0 +1,37 @@
+{
+  "cerebro": {
+    "name": "spotify-brain",
+    "version": "0.1.0",
+    "created": "2026-10-29",
+    "identity": "anonymous",
+    "location": "protected",
+    "connections": {
+      "github": {
+        "repo": "Luimy16/spotify-brain",
+        "visibility": "public",
+        "status": "connected"
+      },
+      "ollama_cloud": {
+        "endpoint": "https://ollama.com/api/chat",
+        "status": "available",
+        "models": ["beam", "gemma4:31b", "gpt-oss:120b-cloud"]
+      },
+      "huggingface": {
+        "endpoint": "https://router.huggingface.co/v1/chat/completions",
+        "status": "available"
+      },
+      "google_gemini": {
+        "endpoint": "https://generativelanguage.googleapis.com/v1beta/models",
+        "status": "available"
+      }
+    },
+    "agents": [
+      {"id": "cerebro", "role": "orquestador", "skill": "brain_agent/cerebro/SKILL.md"},
+      {"id": "creador", "role": "cuentas_spotify", "skill": "brain_agent/creador/SKILL.md"},
+      {"id": "proxy", "role": "proxy_manager", "skill": "brain_agent/proxy/SKILL.md"},
+      {"id": "vision", "role": "ui_vision", "skill": "brain_agent/vision/SKILL.md"},
+      {"id": "audio", "role": "audio_player", "skill": "brain_agent/audio/SKILL.md"},
+      {"id": "registro", "role": "learning_registry", "skill": "brain_agent/registro/SKILL.md"}
+    ]
+  }
+}
